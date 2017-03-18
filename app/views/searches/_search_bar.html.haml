@@ -1,0 +1,17 @@
+.search-bar
+  .overlay
+    .container
+      .search-row
+        .row
+          = form_tag '', class: 'form-inline' do
+            .form-group.has-feedback
+              = text_field_tag 'location', nil, disabled: true, placeholder: @location, required: true, class: 'form-control trip-input'
+              %span.glyphicon.glyphicon-map-marker.form-control-feedback
+            .form-group.has-feedback
+              = text_field_tag 'start-datepicker', nil, class: 'form-control datepicker'
+              %span.glyphicon.glyphicon-calendar.form-control-feedback
+            .form-group.has-feedback
+              = text_field_tag 'end-datepicker', nil, class: 'form-control datepicker'
+              %span.glyphicon.glyphicon-calendar.form-control-feedback
+            = submit_tag 'Search', class: 'btn btn-danger sharp'
+

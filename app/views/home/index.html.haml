@@ -1,0 +1,18 @@
+%header#header
+  .intro
+    .overlay
+      .container#page-top
+        .row
+          - if flash[:error]
+            %p= flash[:error]
+          .intro-text
+            %h1 Go Trip
+            %p Book / Travel / Enjoy
+            =render 'trip_input'
+
+=render 'services'
+=render 'quote_break'
+=render 'car_details'
+=render 'about_us'
+=render 'contact_us'
+= render 'layouts/footer'

@@ -1,0 +1,20 @@
+.list
+  %ul
+    .row
+      - SearchesController::CAR_DETAILS.each do |k, v|
+        .col-xs-12.col-md-4.car-type
+          .car-item
+            %h3= k.to_s.humanize
+            %p= v[:detail]
+            =image_tag "#{k}.jpg", class: 'img-responsive'
+            .separator
+            .row
+              .col-xs-6.col-md-6.car-details.price-tag
+                %p price per KM
+                %p
+                  %i.fa.fa-inr{"aria-hidden" => "true"}
+                  = v[:price]
+              .col-xs-6.col-md-6.car-details
+                %p Capacity
+                %p #{v[:max_people]} people
+            %button.btn.btn-danger.sharp Select

@@ -1,0 +1,22 @@
+#contact.text-center
+  .container
+    .section-title.text-center
+      %h2 Contact Form
+      %hr/
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.
+    .col-md-10.col-md-offset-1
+      %form#contactForm{:name => "sentMessage", :novalidate => ""}
+        .row
+          .col-md-6
+            .form-group
+              %input#name.form-control{:placeholder => "Name", :required => "required", :type => "text"}/
+              %p.help-block.text-danger
+          .col-md-6
+            .form-group
+              %input#email.form-control{:placeholder => "Email", :required => "required", :type => "email"}/
+              %p.help-block.text-danger
+        .form-group
+          %textarea#message.form-control{:name => "message", :placeholder => "Message", :required => "", :rows => "4"}
+          %p.help-block.text-danger
+        #success
+        %button.btn.btn-custom.btn-lg{:type => "submit"} Send Message

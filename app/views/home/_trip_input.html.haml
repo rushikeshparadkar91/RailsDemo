@@ -1,0 +1,8 @@
+.search
+  .container
+    .row
+      = form_tag search_path, class: 'form-inline' do
+        .form-group.has-feedback
+          = text_field_tag 'location', nil, placeholder: 'Enter the location', required: true, class: 'form-control trip-input'
+          %span.glyphicon.glyphicon-map-marker.form-control-feedback
+        = submit_tag 'Search', class: 'btn btn-danger sharp'
